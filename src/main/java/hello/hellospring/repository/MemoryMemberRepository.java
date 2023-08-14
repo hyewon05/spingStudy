@@ -24,7 +24,7 @@ public class MemoryMemberRepository implements MemberRepository{
     public Optional<Member> findByName(String name) {
         return store.values().stream()
                 .filter(member -> member.getName().equals(name)) //자바 내장함수
-                .findAny(); //하나라도 찾으면 반환 없으면 null반환 -> Optional이기 때문에 가능
+                .findAny(); //하나라도 찾으면 반환, 없으면 null반환 -> Optional이기 때문에 가능
     }
 
     @Override
